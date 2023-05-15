@@ -3,11 +3,9 @@
 public class PlayerController : MonoBehaviour
 {
     public float speed = 2f;
-    public float rotationSpeed = 60f;
+    public float rotationSpeed = 50f;
     public float verticalInput;
     public float horizontalInput;
-
-    
 
     // Update is called once per frame
     public void Update()
@@ -28,11 +26,11 @@ public class PlayerController : MonoBehaviour
 
         if (up)
         {
-            transform.Translate(Vector3.up * speed * Time.deltaTime);
+            transform.Rotate(-20 * Time.deltaTime, 0, 0);
         }
         else if (down)
         {
-            transform.Translate(Vector3.down * speed * Time.deltaTime);
+            transform.Rotate(20 * Time.deltaTime, 0, 0);
         }
 
         if (upRoll)

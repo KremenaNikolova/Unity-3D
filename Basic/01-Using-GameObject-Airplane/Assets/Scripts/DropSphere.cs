@@ -7,12 +7,10 @@ public class DropSphere : MonoBehaviour
     public float fallSpeed = 100f;
 
     public Rigidbody rb;
-    public float zeroMass = 0f;
     public float heavyMass = 10f;
 
     void Update()
     {
-
         var dropKey = Input.GetKeyDown(KeyCode.Space);
 
         if (dropKey)
