@@ -31,3 +31,5 @@
     <p><b>[Hard]</b> Create and attach new script which will "drop" a sphere gameobject from the plane when press a spacebar. Create a new script and attach it to that cloned object. The script will translate the object down like it's falling. Destroy the clonned object after 5 seconds.</p>
     </li>
 </ol>
+
+<table align="left">
