@@ -11,9 +11,11 @@
 
 [SoftUniLogo]: https://cdn.discordapp.com/attachments/979101848361377914/1077188522320072704/SoftUni-Logo-Flat.png "SoftUni Text" -->
 
-<img src="https://cdn.discordapp.com/attachments/979101848361377914/1077188522320072704/SoftUni-Logo-Flat.png"  width="50%" height="20%">
+<br/>
 
-<img src="https://1000logos.net/wp-content/uploads/2021/10/Unity-logo.png"  width="40%" align="right">
+<img src="https://cdn.discordapp.com/attachments/979101848361377914/1077188522320072704/SoftUni-Logo-Flat.png"  width="50%" align="left">
+
+<img src="https://1000logos.net/wp-content/uploads/2021/10/Unity-logo.png"  width="40%" align="right" >
 
 <br/>
 <br/>
