@@ -3,7 +3,8 @@
 public class PlayerController : MonoBehaviour
 {
     public float speed = 10f;
-    public float rotationSpeed = 0.5f;
+    public float rotationSpeed = 10f;
+    public float torqueSpeed = 0.5f;
     public float verticalInput;
     public float horizontalInput;
     public float rollInput;
@@ -29,7 +30,7 @@ public class PlayerController : MonoBehaviour
 
 
         rb.AddRelativeForce(Vector3.forward * speed, ForceMode.Acceleration);
-        rb.AddTorque(Vector3.up * rotationSpeed * horizontalInput, ForceMode.Acceleration);
+        rb.AddTorque(Vector3.up * torqueSpeed * horizontalInput, ForceMode.Acceleration);
 
         if (Input.GetKey(KeyCode.Q))
         {
