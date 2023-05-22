@@ -6,7 +6,19 @@ using UnityEngine.UIElements;
 
 public class ColliderDetector : MonoBehaviour
 {
+    private RaycastHit hit;
+    private float hitDistance = 5f;
     private bool isCrashed = false;
+
+    private void FixedUpdate()
+    {
+        Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * hitDistance, Color.green);
+
+        if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, hitDistance))
+        {
+            Debug.Log($"Did hit!");
+        }
+    }
 
     private void OnTriggerEnter(Collider collider)
     {
