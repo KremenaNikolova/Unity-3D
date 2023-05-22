@@ -11,7 +11,7 @@
     </li>
     <li>
     <p>Create a gate to passes with the plane <i>(see the image "Gate.png" sibling to that file)</i>.</p>
-    <img src="Assets/Gate.png">
+    <img src="Assets/Gate.png" width=60%>
     </li>
     <li>
     <p>Create a script called <i>ColliderDetector.cs</i> and implement the <b>"OnTriggerEnter"</b> method which will detect when to pass the gate then log in to the console "Gate passed!".</p>
