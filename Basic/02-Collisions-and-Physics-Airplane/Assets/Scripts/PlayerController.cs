@@ -2,28 +2,35 @@
 
 public class PlayerController : MonoBehaviour
 {
-    public float speed;
-    public float rotationSpeed;
+    public float speed = 10f;
+    public float rotationSpeed = 0.5f;
     public float verticalInput;
     public float horizontalInput;
     public float rollInput;
 
+    public Rigidbody rb;
+
     // Start is called before the first frame update
     void Start()
     {
-
+        rb = gameObject.AddComponent<Rigidbody>();
+        rb.useGravity = false;
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
         rollInput = 0;
-        transform.Translate(Vector3.forward * speed);
         
         // get the user's vertical input
         verticalInput = Input.GetAxis("Vertical");
         // get the user's vertical input
         horizontalInput = Input.GetAxis("Horizontal");
+
+
+        rb.AddRelativeForce(Vector3.forward * speed, ForceMode.Acceleration);
+        rb.AddTorque(Vector3.up * rotationSpeed * horizontalInput, ForceMode.Acceleration);
+
         if (Input.GetKey(KeyCode.Q))
         {
             rollInput = -1;
