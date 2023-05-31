@@ -35,8 +35,7 @@
     <p><b>HINT:</b> See the example images sibling to that file for more references.</p>
     </br>
     </li>
-    <img src="Assets/UIReference.png" width=60% align="middle">
+    <img src="Assets/UIReference.png" width=100%>
     </br>
-    <img src="Assets/Finish.png" width=49% align="left">
-    <img src="Assets/Failed.png" width=49% align="right">
+    <p><img src="Assets/Finish.png" width=48%><img src="Assets/Failed.png" width=48% align="right" style="display: inline-block"></p>
 </ol>
