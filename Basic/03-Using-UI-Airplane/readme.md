@@ -37,7 +37,6 @@
     </li>
     <img src="Assets/UIReference.png" width=60% align="middle">
     </br>
-    </br>
-    <img src="Assets/Failed.png" width=49% align="right">
     <img src="Assets/Finish.png" width=49% align="left">
+    <img src="Assets/Failed.png" width=49% align="right">
 </ol>
