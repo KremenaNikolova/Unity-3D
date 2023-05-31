@@ -1,9 +1,7 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Timer : MonoBehaviour
+public class Canva : MonoBehaviour
 {
     public Slider timerSlider;
     private float gameTime = 60f;
@@ -13,6 +11,10 @@ public class Timer : MonoBehaviour
     private int counterPoints = 0;
     private int maxPoints = 4;
 
+    public Image gameOverScreen;
+    public Text gameOverText;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -21,12 +23,19 @@ public class Timer : MonoBehaviour
 
         counter.text = $"{counterPoints} / {maxPoints}";
 
+        gameOverScreen.enabled = false;
+        gameOverText.enabled = false;
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         timerSlider.value -= Time.deltaTime;
+
+        if (timerSlider.value <= 0)
+        {
+            GameOver();
+        }
     }
 
     public void UpdateTimer()
@@ -38,5 +47,21 @@ public class Timer : MonoBehaviour
     {
         counterPoints++;
         counter.text = $"{counterPoints} / {maxPoints}";
+
+        if (counterPoints == maxPoints)
+        {
+            gameOverScreen.enabled = true;
+            gameOverText.enabled = true;
+            gameOverText.text = "Passed";
+            gameOverText.color = Color.green;
+        }
+    }
+
+    public void GameOver()
+    {
+        gameOverScreen.enabled = true;
+        gameOverText.enabled = true;
+        gameOverText.text = "YOU DIED";
+        gameOverText.color = Color.red;
     }
 }

@@ -1,10 +1,9 @@
-using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class ColliderDetector : MonoBehaviour
 {
-    public Timer timeSlider;
+    public Canva timeSlider;
+    
 
     private void OnTriggerEnter(Collider other)
     {
@@ -20,6 +19,7 @@ public class ColliderDetector : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
         Debug.Log("Plane crashed! Game Over");
+        timeSlider.GameOver();
     }
 
     private void FixedUpdate()
