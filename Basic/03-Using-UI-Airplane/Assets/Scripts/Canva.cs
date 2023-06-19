@@ -16,8 +16,10 @@ public class Canva : MonoBehaviour
 
 
     // Start is called before the first frame update
-    void Start()
+    public void Start()
     {
+        gameOverScreen.gameObject.SetActive(false);
+
         timerSlider.maxValue = gameTime;
         timerSlider.value = gameTime;
 
